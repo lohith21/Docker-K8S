@@ -1,0 +1,144 @@
+    1  ls
+    2  docker version 
+    3  systemctl status docker 
+    4  service docker status 
+    5  ls
+    6  history 
+    7  docker ps 
+    8  docker ps -a
+    9  docker container ls 
+   10  docker container ls -a 
+   11  docker images 
+   12  docker images ls 
+   13  docker images echo "Welcome to the world of Docker" 
+   14  docker run busybox echo "Welcome to the world of Docker" 
+   15  docker ps 
+   16  docker ps -a
+   17  docker images 
+   18  docker run busybox echo "Test - 1" 
+   19  docker run busybox echo "Test - 2" 
+   20  docker run busybox echo "Test - 3" 
+   21  docker run ubuntu:16.04 echo "Test - 3" 
+   22  docker ps 
+   23  docker ps -a 
+   24  docker images 
+   25  cat /etc/os-release 
+   26  docker pull centos:7
+   27  docker images 
+   28  ls
+   29  cd ..
+   30  ls
+   31  mkdir 01-Container-Intro
+   32  ls
+   33  cd 01-Container-Intro/
+   34  ls
+   35  history > Day1.txt 
+   36  ls
+   37  cd ..
+   38  ls
+   39  git add . ; git commit -m "Day 1" ; git push 
+   40  ls
+   41  git pull 
+   42  vim 01-Container-Intro/Day1.txt 
+   43  ls
+   44  cd ..
+   45  ls
+   46  pwd
+   47  cd 
+   48  pwd
+   49  exit 
+   50  pwd
+   51  exit 
+   52  pwd
+   53  ls
+   54  docker pull amitvashist7/myapache-benz-31-jan-2022:v1 
+   55  ls
+   56  cd docker-kubernetes-sf-11-Feb-2022/
+   57  git log 
+   58  git diff  beabb72..e77b6136
+   59  docker images 
+   60  docker pull amitvashist7/apache-ex4
+   61  docker login 
+   62  docker pull amitvashist7/apache-ex4
+   63  docker logout 
+   64  docker images 
+   65  docker rmi 5d592881faed
+   66  docker pull amitvashist7/apache-ex4
+   67  docker images 
+   68  docker rmi amitvashist7/myapache-benz-31-jan-2022:v1 
+   69  docker images 
+   70  docker ps 
+   71  docker ps -a 
+   72  docker rm 18951f860074
+   73  docker ps -a 
+   74  docker ps -a
+   75  docker ps -aq
+   76  docker rm $(docker ps -aq) 
+   77  docker ps -a 
+   78  ls
+   79  cd 01-Docker/
+   80  ls
+   81  cd 01-Container-Intro/
+   82  ls
+   83  history > Day1.txt 
+   84  cd ..
+   85  git add . ; git commit -m "Day 1" ; git push 
+   86  docker run ubuntu:16.04 echo "Test - 3" 
+   87  docker ps -a 
+   88  docker run -it ubuntu:16.04 bash 
+   89  docker ps 
+   90* docker start 
+   91  docker run -it ubuntu:16.04 bash 
+   92  docker ps 
+   93  docker ps -a 
+   94  docker start 5174603f983a
+   95  docker ps 
+   96  docker ps -a 
+   97  docker attach  5174603f983a
+   98  docker ps 
+   99  docker attach  5174603f983a
+  100  docker ps 
+  101  docker kill 5174603f983a
+  102  docker ps 
+  103  docker ps -a
+  104  docker attach  5174603f983a
+  105  docker start  5174603f983a
+  106  docker ps -a
+  107  docker attach  5174603f983a
+  108  ls
+  109  docker ps 
+  110  docker exec -it 5174603f983a cat /root/amit.txt 
+  111  docker exec -it 5174603f983a cat /amit.txt 
+  112  docker exec -it 5174603f983a ps -ef 
+  113  docker ps 
+  114  docker exec -it 5174603f983a bash 
+  115  ls
+  116  docker ps -a 
+  117  docker rename angry_heisenberg test
+  118  docker ps -a 
+  119  docker run -it --name test-2 ubuntu:16.04 bash 
+  120  docker ps -a 
+  121  docker inspect dac21c71e335
+  122  docker ps -a 
+  123  docker ps 
+  124  docker ps -q
+  125  docker ps -ql
+  126  docker inspect $(docker ps -ql) 
+  127  systemctl status docker 
+  128  docker network ls 
+  129  docker network inspect 4956ff328cec
+  130  ip addr 
+  131  docker inspect $(docker ps -ql) 
+  132  ip addr 
+  133  ls
+  134  docker ps -a
+  135  docker ps -aq
+  136  docker rm $(docker ps -aq) 
+  137  docker kill  $(docker ps -aq) 
+  138  docker rm $(docker ps -aq) 
+  139  ls
+  140  cd 01-Docker/
+  141  ls
+  142  cd 01-Container-Intro/
+  143  ls
+  144  history > Day1.txt 

@@ -1,0 +1,474 @@
+    1  ls
+    2  docker version 
+    3  systemctl status docker 
+    4  service docker status 
+    5  ls
+    6  history 
+    7  docker ps 
+    8  docker ps -a
+    9  docker container ls 
+   10  docker container ls -a 
+   11  docker images 
+   12  docker images ls 
+   13  docker images echo "Welcome to the world of Docker" 
+   14  docker run busybox echo "Welcome to the world of Docker" 
+   15  docker ps 
+   16  docker ps -a
+   17  docker images 
+   18  docker run busybox echo "Test - 1" 
+   19  docker run busybox echo "Test - 2" 
+   20  docker run busybox echo "Test - 3" 
+   21  docker run ubuntu:16.04 echo "Test - 3" 
+   22  docker ps 
+   23  docker ps -a 
+   24  docker images 
+   25  cat /etc/os-release 
+   26  docker pull centos:7
+   27  docker images 
+   28  ls
+   29  cd ..
+   30  ls
+   31  mkdir 01-Container-Intro
+   32  ls
+   33  cd 01-Container-Intro/
+   34  ls
+   35  history > Day1.txt 
+   36  ls
+   37  cd ..
+   38  ls
+   39  git add . ; git commit -m "Day 1" ; git push 
+   40  ls
+   41  git pull 
+   42  vim 01-Container-Intro/Day1.txt 
+   43  ls
+   44  cd ..
+   45  ls
+   46  pwd
+   47  cd 
+   48  pwd
+   49  exit 
+   50  pwd
+   51  exit 
+   52  pwd
+   53  ls
+   54  docker pull amitvashist7/myapache-benz-31-jan-2022:v1 
+   55  ls
+   56  cd docker-kubernetes-sf-11-Feb-2022/
+   57  git log 
+   58  git diff  beabb72..e77b6136
+   59  docker images 
+   60  docker pull amitvashist7/apache-ex4
+   61  docker login 
+   62  docker pull amitvashist7/apache-ex4
+   63  docker logout 
+   64  docker images 
+   65  docker rmi 5d592881faed
+   66  docker pull amitvashist7/apache-ex4
+   67  docker images 
+   68  docker rmi amitvashist7/myapache-benz-31-jan-2022:v1 
+   69  docker images 
+   70  docker ps 
+   71  docker ps -a 
+   72  docker rm 18951f860074
+   73  docker ps -a 
+   74  docker ps -a
+   75  docker ps -aq
+   76  docker rm $(docker ps -aq) 
+   77  docker ps -a 
+   78  ls
+   79  cd 01-Docker/
+   80  ls
+   81  cd 01-Container-Intro/
+   82  ls
+   83  history > Day1.txt 
+   84  cd ..
+   85  git add . ; git commit -m "Day 1" ; git push 
+   86  docker run ubuntu:16.04 echo "Test - 3" 
+   87  docker ps -a 
+   88  docker run -it ubuntu:16.04 bash 
+   89  docker ps 
+   90* docker start 
+   91  docker run -it ubuntu:16.04 bash 
+   92  docker ps 
+   93  docker ps -a 
+   94  docker start 5174603f983a
+   95  docker ps 
+   96  docker ps -a 
+   97  docker attach  5174603f983a
+   98  docker ps 
+   99  docker attach  5174603f983a
+  100  docker ps 
+  101  docker kill 5174603f983a
+  102  docker ps 
+  103  docker ps -a
+  104  docker attach  5174603f983a
+  105  docker start  5174603f983a
+  106  docker ps -a
+  107  docker attach  5174603f983a
+  108  ls
+  109  docker ps 
+  110  docker exec -it 5174603f983a cat /root/amit.txt 
+  111  docker exec -it 5174603f983a cat /amit.txt 
+  112  docker exec -it 5174603f983a ps -ef 
+  113  docker ps 
+  114  docker exec -it 5174603f983a bash 
+  115  ls
+  116  docker ps -a 
+  117  docker rename angry_heisenberg test
+  118  docker ps -a 
+  119  docker run -it --name test-2 ubuntu:16.04 bash 
+  120  docker ps -a 
+  121  docker inspect dac21c71e335
+  122  docker ps -a 
+  123  docker ps 
+  124  docker ps -q
+  125  docker ps -ql
+  126  docker inspect $(docker ps -ql) 
+  127  systemctl status docker 
+  128  docker network ls 
+  129  docker network inspect 4956ff328cec
+  130  ip addr 
+  131  docker inspect $(docker ps -ql) 
+  132  ip addr 
+  133  ls
+  134  docker ps -a
+  135  docker ps -aq
+  136  docker rm $(docker ps -aq) 
+  137  docker kill  $(docker ps -aq) 
+  138  docker rm $(docker ps -aq) 
+  139  ls
+  140  cd 01-Docker/
+  141  ls
+  142  cd 01-Container-Intro/
+  143  ls
+  144  history > Day1.txt 
+  145  ls
+  146  cd ..
+  147  ls
+  148  cd ..
+  149  ls
+  150  git add . ; git commit -m "01-Docker" ; git push 
+  151  docker images 
+  152  docker pull ubuntu
+  153  docker images 
+  154  docker pull amitvashist7/k8s-tiny-web
+  155  docker images 
+  156  docker pull amitvashist7/k8s-tiny-web:2
+  157  docker images 
+  158  docker run -it ubuntu 
+  159  docker ps 
+  160  docker run -it ubuntu 
+  161  docker ps 
+  162  docker run -itd ubuntu 
+  163  docker ps 
+  164  docker attach flamboyant_bardeen
+  165  docker ps 
+  166  docker run -itd --name job1  ubuntu 
+  167  docker run -itd --name job2  ubuntu 
+  168  docker ps 
+  169  docker stop job1
+  170  docker kill $(docker ps -qa) 
+  171  docker rm $(docker ps -qa) 
+  172  docker ps 
+  173  docker run -itd --name job1  ubuntu 
+  174  docker ps -l 
+  175  docker run -itd --name job2  ubuntu 
+  176  docker ps -l 
+  177  docker ps -a 
+  178  docker ps 
+  179  docker inspect job2
+  180  docker run -itd --name job3  ubuntu 
+  181  docker run -itd --name job4  ubuntu 
+  182  docker run -itd --name job5  ubuntu 
+  183  docker ps 
+  184  docker inspect --format '{{.Name}} {{.State.Running}}' job1 
+  185  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' job1 
+  186  docker ps -q 
+  187  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' ${docker ps -q}
+  188  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  189  docker kill  job3
+  190  docker kill  job2
+  191  docker run -itd --name test1  ubuntu 
+  192  docker run -itd --name test2  ubuntu 
+  193  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  194  docker start  job2
+  195  docker start  job3
+  196  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  197  ls
+  198  cd 01-Docker/
+  199  ls
+  200  cd 01-Container-Intro/
+  201  ls
+  202  history > Day2.txt 
+  203  ls
+  204  cd ..
+  205  ls
+  206  cd ..
+  207  ls
+  208  git add . ; git commit -m "01-Docker" ; git push 
+  209  docker images 
+  210  docker run -d  --name tiny-web-1 amitvashist7/k8s-tiny-web
+  211  docker ps 
+  212  docker attach tiny-web-1
+  213  docker ps 
+  214  docker start tiny-web-1
+  215  docker ps 
+  216  docker exec -it tiny-web-1 sh 
+  217  docker ps 
+  218  docker run -d  --name tiny-web-2 amitvashist7/k8s-tiny-web
+  219  docker run -d  --name tiny-web-3 amitvashist7/k8s-tiny-web
+  220  docker ps 
+  221  ls
+  222  cd 01-Docker/
+  223  ls
+  224  mkdir 02-Dockerfile
+  225  ls
+  226  cd 02-Dockerfile/
+  227  ls
+  228  mkdir apache/v1 -p 
+  229  ls
+  230  cd apache/
+  231  ls
+  232  cd v1/
+  233  ls
+  234  vim Dockerfile 
+  235  docker run -it ubuntu:16.04 
+  236  docker ps 
+  237  cat Dockerfile 
+  238  docker build -t myfisrtimage:v1 . 
+  239  docker image 
+  240  docker images
+  241  cd 
+  242  docker images 
+  243  docker run -d --name test-apache-1 myfisrtimage:v1 
+  244  docker ps 
+  245  docker run -d --name test-apache-2 myfisrtimage:v1 
+  246  docker ps 
+  247  ls
+  248  cd - 
+  249  ls
+  250  cd ..
+  251  ls
+  252  cd ..
+  253  ls
+  254  cd ..
+  255  l
+  256  cd 01-Container-Intro/
+  257  ls
+  258  history > Day2.txt 
+  259  git add . ; git commit -m "02-DockerFile" ; git push 
+  260  ls
+  261  cd ..
+  262  ls
+  263  cd ..
+  264  ls
+  265  git add . ; git commit -m "02-DockerFile" ; git push 
+  266  ls
+  267  cd 01-Docker/02-Dockerfile/
+  268  ls
+  269  cd apache/
+  270  ls
+  271  cp -rf v1 v2 
+  272  ls
+  273  cd v2/
+  274  ls
+  275  vim Dockerfile 
+  276  ls
+  277  docker ps 
+  278  docker kill $(docker ps -qa) 
+  279  docker rm $(docker ps -qa) 
+  280  docker run -d --name test-apache-1 myfisrtimage:v1 
+  281  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  282  curl 172.17.0.2
+  283  ls
+  284  vim index.html
+  285  ls
+  286  vim Dockerfile 
+  287  ls
+  288  docker build -t myfisrtimage:v2 . 
+  289  docker images 
+  290  docker run -d --name test-apache-2 myfisrtimage:v2
+  291  docker ps 
+  292  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  293  curl 172.17.0.3
+  294  curl 172.17.0.2
+  295  curl 172.17.0.3
+  296  curl 172.17.0.2
+  297  curl 172.17.0.3
+  298  docker run -d --name test-apache-3 myfisrtimage:v2
+  299  docker run -d --name test-apache-4 myfisrtimage:v2
+  300  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  301  curl 172.17.0.3
+  302  curl 172.17.0.4
+  303  curl 172.17.0.5
+  304  docker ps 
+  305  curl -vvv 172.17.0.5
+  306  sl
+  307  ls
+  308  cd ..
+  309  ls
+  310  cd ..
+  311  ls
+  312  mkdir python-web-app
+  313  cd python-web-app/
+  314  ls
+  315  vim app.py 
+  316  vim mydockerfile
+  317  cat mydockerfile 
+  318  vim req.txt 
+  319  ls
+  320  cat app.py 
+  321  ls
+  322  cat req.txt 
+  323  ls
+  324  vim mydockerfile 
+  325  ls
+  326  vim app.py 
+  327  ls
+  328  docker build -t mypywebapp:v1 . 
+  329  docker build -t mypywebapp:v1 -f mydockerfile . 
+  330  docker images 
+  331  docker run -d mypywebapp:v1 
+  332  docker ps 
+  333  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  334* docker inspect 76e6bb774a2c
+  335  docker ps 
+  336  docker inspect 76e6bb774a2c
+  337  curl -vvv 172.17.0.5
+  338  curl -vvv 172.17.0.6
+  339  docker ps 
+  340  curl -vvv 172.17.0.6:5001
+  341  ls
+  342  vim mydockerfile 
+  343  docker build -t mypywebapp:v2 -f mydockerfile . 
+  344  docker run -d --name test-py-2 mypywebapp:v2
+  345  docker ps 
+  346  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  347  curl -vvv 172.17.0.7:8081
+  348  vim mydockerfile 
+  349  docker build -t mypywebapp:v3 -f mydockerfile . 
+  350  docker images 
+  351  docker run -d --name test-py-3 mypywebapp:v3
+  352  docker ps 
+  353  curl -vvv 172.17.0.8:8081
+  354  curl -vvv 172.17.0.8:5001
+  355  ls
+  356  cd ..
+  357  s
+  358  ls
+  359  cd apache/
+  360  s
+  361  ls
+  362  cp -rf v2 v3
+  363  ls
+  364  cd v3/
+  365  ls
+  366  vim Dockerfile 
+  367  ls
+  368  docker images 
+  369  docker build -t myfisrtimage:v3  .
+  370  docker run -d  myfisrtimage:v3
+  371  docker ps 
+  372  docker images 
+  373  docker inspect myfisrtimage:v3 
+  374  docker images 
+  375  docker inspect mypywebapp:v3 
+  376  docker history  mypywebapp:v3 
+  377  docker history myfisrtimage:v3 
+  378  docker history myfisrtimage:v2
+  379  docker history myfisrtimage:v1
+  380  ls
+  381  cd ..
+  382  ls
+  383  cd ..
+  384  ls
+  385  cd python-web-app/
+  386  ls
+  387  cat app.py 
+  388  LS
+  389  ls
+  390  cat app.py 
+  391  ls
+  392  vim mydockerfile 
+  393  ls
+  394  python app.py 
+  395  s
+  396  ls
+  397  docker images 
+  398  docker build -t mypywebapp:v4 .
+  399  docker build -t mypywebapp:v4 -f mydockerfile . 
+  400  docker images 
+  401  docker run -d  mypywebapp:v4 
+  402  docker ps 
+  403  docker inspect --format '{{.Name}} {{.State.Running}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  404  curl 172.17.0.10:5001
+  405  curl 172.17.0.10:5001/
+  406  curl 172.17.0.10:5001/hello
+  407  curl 172.17.0.10:5001/info
+  408  docker ps 
+  409  docker login 
+  410  docker logout 
+  411  docker push mypywebapp:v4
+  412  docker login 
+  413  docker push mypywebapp:v4
+  414  docker images 
+  415  docker tag bbf304ff4b2d amitvashist7/mypython-web-app-sg-14-feb-2022
+  416  docker images 
+  417  docker push amitvashist7/mypython-web-app-sg-14-feb-2022
+  418  ls
+  419  cd ..
+  420  ls
+  421  cd ..
+  422  ls
+  423  cd 01-Container-Intro/
+  424  ls
+  425  history > Day2.txt 
+  426  ls
+  427  cd ../../
+  428  ls
+  429  docker ps 
+  430  docker network ;s 
+  431  docker network ls 
+  432  ip addr 
+  433  docker network ls 
+  434  docker network inspect 4956ff328cec
+  435  curl 172.17.0.10
+  436  curl 172.17.0.10:5001
+  437  curl localhost:5001
+  438  ls
+  439  docker ps 
+  440  netstat -tulnp 
+  441  docker run -d --name test-ntw-1 -p 8001:5001 mypywebapp:v4
+  442  docker ps 
+  443  netstat -tulnp 
+  444  systemctl status docker 
+  445  curl localhost:5001
+  446  netstat -tulnp 
+  447  curl localhost:8001
+  448  curl 172.31.0.100:8001
+  449  docker ps 
+  450  docker run -d --name test-ntw-2 -p 8001:5001 mypywebapp:v4
+  451  netstat -tulnp 
+  452  docker run -d --name test-ntw-3 -p 8002:5001 mypywebapp:v4
+  453  docker ps 
+  454  docker run -d --name test-ntw-4 -P mypywebapp:v4
+  455  docker ps 
+  456  docker run -d --name test-ntw-5 -P mypywebapp:v4
+  457  docker run -d --name test-ntw-6 -P mypywebapp:v4
+  458  docker ps 
+  459  docker run -d --name test-ntw-7 -P mypywebapp:v3
+  460  docker ps 
+  461  docker run -d --name test-ntw-8 -P myfisrtimage:v2
+  462  docker ps 
+  463  curl 172.31.0.100:32772
+  464  curl 172.31.0.100:32771
+  465  docker stop 97f42e114b3f
+  466  docker ps 
+  467  docker start 97f42e114b3f
+  468  docker ps 
+  469  ls
+  470  cd 01-Docker/
+  471  ls
+  472  cd 01-Container-Intro/
+  473  ls
+  474  history > Day2.txt 
